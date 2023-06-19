@@ -1,0 +1,139 @@
+<div class="main-outer">
+  <div class="row">
+
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6 inner" >
+
+      <form [formGroup]="form" class="example-form" >
+
+        <div class="mb-3 row">
+          <label for="" class="col-sm-3 col-form-label">Select Product 11</label>
+          <div class="col-sm-9">
+
+            <mat-form-field appearance="outline" >
+
+              <mat-select [formControl]="itemCtr" formControlName="item" #singleSelect>
+                <mat-option>
+                  <ngx-mat-select-search [formControl]="itemFilterCtrl" placeholderLabel="Search.."></ngx-mat-select-search>
+                </mat-option>
+                <mat-option *ngFor="let item of filteredItems| async" [value]="item.value">
+                  {{item.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="Price" class="col-sm-3 col-form-label">Price</label>
+          <div class="col-sm-9">
+            <input formControlName="price" type="number"  class="form-control" id="Price">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="Qty" class="col-sm-3 col-form-label">Qty</label>
+          <div class="col-sm-9">
+            <input formControlName="qty" type="number" step="0.01" class="form-control" id="Qty">
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-6">
+            <button  type="button"  class="addbutton" mat-raised-button color="primary">Add Product</button>&nbsp;
+            <button  type="button"  class="cancelbutton" mat-raised-button color="primary">Cancel Order</button>&nbsp;
+          </div>
+        </div>
+
+      </form>
+      <form [formGroup]="formSave">
+        <br>
+
+        <div class="mb-3 row">
+          <label for="TotalAmount" class="col-sm-3 col-form-label">Total Amount</label>
+          <div class="col-sm-6">
+            <input formControlName="totalamount" type="number" step="0.01" class="form-control" id="TotalAmount">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="Discount" class="col-sm-3 col-form-label">Discount</label>
+          <div class="col-sm-6">
+            <input  formControlName="discount" type="number" step="0.01" class="form-control" id="Discount">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="NetTotal" class="col-sm-3 col-form-label">Net Total</label>
+          <div class="col-sm-6">
+            <input formControlName="nettotal"  type="number" step="0.01" class="form-control" id="NetTotal">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="paidamount" class="col-sm-3 col-form-label">Paid Amount</label>
+          <div class="col-sm-6">
+            <input  formControlName="paidamount" type="number" step="0.01" class="form-control" id="paidamount">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="balanceamount" class="col-sm-3 col-form-label">Balance Amount</label>
+          <div class="col-sm-6">
+            <input formControlName="balanceamount" type="number" step="0.01" class="form-control" id="balanceamount">
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="Paytype1" class="col-sm-3 col-form-label">Paytype 1</label>
+          <div class="col-sm-6">
+
+            <select id="Paytype1" class="form-select form-select-sm" aria-label=".form-select-sm example">
+
+
+              <option   value="">Select</option>
+            </select>
+          </div>
+        </div>
+
+
+        <button  class="Savebutton" type="submit"  mat-raised-button color="primary">Save & Print</button>&nbsp;
+
+
+      </form>
+    </div>
+
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6 inner" >
+      <div class="inner-scroll">
+        <table class="table table-hover">
+          <thead>
+
+          <tr class="scrl">
+
+            <th>Item Description</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Amount</th>
+            <th>Option</th>
+          </tr>
+
+          </thead>
+          <tbody>
+
+
+
+          </tbody>
+
+          <tfoot>
+
+          </tfoot>
+        </table>
+      </div>
+
+      <br>
+
+
+    </div>
+  </div>
+</div>
