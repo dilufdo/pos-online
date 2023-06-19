@@ -13,6 +13,7 @@ import {NgxMatSelectSearchModule} from "ngx-mat-select-search";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatButtonModule} from "@angular/material/button";
+import { DeleteOrderComponent } from './inner-items/dashboard-context/order/manage-order/delete-order/delete-order.component';
 
 
 
@@ -22,7 +23,8 @@ import {MatButtonModule} from "@angular/material/button";
     DashboardContextComponent,
 
     ManageOrderComponent,
-    AddOrderComponent
+    AddOrderComponent,
+    DeleteOrderComponent
   ],
   imports: [
     CommonModule,
