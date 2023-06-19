@@ -1,0 +1,56 @@
+.main-outer{
+  width: 100%;
+  padding:20px 0 50px 0;
+}
+.row{
+  margin: 0;
+}
+.inner{
+  margin-bottom: 20px;
+
+}
+.cancelbutton{
+  background-color: #d35400;
+
+}
+
+
+.table table-hover{
+  height: 40px;
+  overflow: scroll;
+}
+th{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+tr{
+  background-color: #f2f2f2;
+}
+td{
+  border: 1px solid #ddd;
+}
+.delete{
+  background-color: #c0392b;
+  border: none;
+  border-radius: 50px;
+}
+.inner-scroll{
+  height:400px;
+  overflow: scroll;
+}
+
+.scrl{z-index:100;
+
+
+}
+
+mat-form-field{
+  width:100%;
+  padding: 4px;
+}
+.mat-form-field-infix {
+  padding: 2px; /* Adjust the padding value as needed */
+}
