@@ -14,6 +14,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatButtonModule} from "@angular/material/button";
 import { DeleteOrderComponent } from './inner-items/dashboard-context/order/manage-order/delete-order/delete-order.component';
+import { UpdateOrderComponent } from './inner-items/dashboard-context/order/manage-order/update-order/update-order.component';
 
 
 
@@ -24,7 +25,8 @@ import { DeleteOrderComponent } from './inner-items/dashboard-context/order/mana
 
     ManageOrderComponent,
     AddOrderComponent,
-    DeleteOrderComponent
+    DeleteOrderComponent,
+    UpdateOrderComponent
   ],
   imports: [
     CommonModule,
